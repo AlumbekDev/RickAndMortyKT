@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black"
+    tools:context=".ui.fragment.episode.episodesDetail.EpisodesDetailFragment">
+
+    <TextView
+        android:id="@+id/title_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30sp"
+        android:text="Name:"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@id/title_name"
+        app:layout_constraintTop_toTopOf="@+id/title_name"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/title_air_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Air date:"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/title_name"
+        app:layout_constraintTop_toBottomOf="@id/title_name" />
+
+    <TextView
+        android:id="@+id/detail_air_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@id/title_air_date"
+        app:layout_constraintTop_toBottomOf="@id/detail_name"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/title_episode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Code of episode:"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/title_air_date"
+        app:layout_constraintTop_toBottomOf="@+id/title_air_date" />
+
+    <TextView
+        android:id="@+id/detail_episode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@+id/title_episode"
+        app:layout_constraintTop_toBottomOf="@+id/detail_air_date"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/title_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Url:"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/title_episode"
+        app:layout_constraintTop_toBottomOf="@+id/title_episode" />
+
+    <TextView
+        android:id="@+id/detail_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@+id/title_url"
+        app:layout_constraintTop_toBottomOf="@+id/detail_episode"
+        tools:text="@tools:sample/full_names" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/character_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="
+        detail_name,detail_air_date,detail_episode,detail_url,
+        title_name,title_air_date,title_episode,title_url" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

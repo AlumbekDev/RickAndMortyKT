@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black"
+    tools:context=".ui.fragment.location.locationsDetail.LocationsDetailFragment">
+
+
+    <TextView
+        android:id="@+id/title_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30sp"
+        android:text="Name:"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@id/title_name"
+        app:layout_constraintTop_toTopOf="@+id/title_name"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/title_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Type:"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/title_name"
+        app:layout_constraintTop_toBottomOf="@id/title_name" />
+
+    <TextView
+        android:id="@+id/detail_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@id/title_type"
+        app:layout_constraintTop_toBottomOf="@id/detail_name"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/title_dimension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Dimension:"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/title_type"
+        app:layout_constraintTop_toBottomOf="@+id/title_type" />
+
+    <TextView
+        android:id="@+id/detail_dimension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@+id/title_dimension"
+        app:layout_constraintTop_toBottomOf="@+id/detail_type"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/title_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Url:"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/title_dimension"
+        app:layout_constraintTop_toBottomOf="@+id/title_dimension" />
+
+    <TextView
+        android:id="@+id/detail_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@+id/title_url"
+        app:layout_constraintTop_toBottomOf="@+id/detail_dimension"
+        tools:text="@tools:sample/full_names" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/character_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="
+        title_name,title_type,title_dimension,title_url,
+        detail_name,detail_type,detail_dimension,detail_url" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

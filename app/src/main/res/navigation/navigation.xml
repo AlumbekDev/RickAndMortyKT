@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/characterFragment">
+
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="com.example.rickandmortykt.ui.fragment.character.CharacterFragment"
+        android:label="Characters"
+        tools:layout="@layout/fragment_character">
+        <action
+            android:id="@+id/action_characterFragment_to_charactersDetailFragment"
+            app:destination="@id/charactersDetailFragment" />
+        <action
+            android:id="@+id/action_characterFragment_to_characterDialogFragment"
+            app:destination="@id/characterDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodeFragment"
+        android:name="com.example.rickandmortykt.ui.fragment.episode.EpisodeFragment"
+        android:label="Episodes"
+        tools:layout="@layout/fragment_episode">
+        <action
+            android:id="@+id/action_episodeFragment_to_episodesDetailFragment"
+            app:destination="@id/episodesDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.rickandmortykt.ui.fragment.location.LocationFragment"
+        android:label="Locations"
+        tools:layout="@layout/fragment_location">
+        <action
+            android:id="@+id/action_locationFragment_to_locationsDetailFragment"
+            app:destination="@id/locationsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/charactersDetailFragment"
+        android:name="com.example.rickandmortykt.ui.fragment.character.charactersDetail.CharactersDetailFragment"
+        android:label="Character"
+        tools:layout="@layout/fragment_characters_detail">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationsDetailFragment"
+        android:name="com.example.rickandmortykt.ui.fragment.location.locationsDetail.LocationsDetailFragment"
+        android:label="Location"
+        tools:layout="@layout/fragment_locations_detail">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <dialog
+        android:id="@+id/characterDialogFragment"
+        android:name="com.example.rickandmortykt.ui.fragment.character.CharacterDialogFragment"
+        android:label="fragment_character_dialog"
+        tools:layout="@layout/fragment_character_dialog">
+        <argument
+            android:name="image"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/episodesDetailFragment"
+        android:name="com.example.rickandmortykt.ui.fragment.episode.episodesDetail.EpisodesDetailFragment"
+        android:label="Episode"
+        tools:layout="@layout/fragment_episodes_detail">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>
