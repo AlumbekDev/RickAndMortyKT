@@ -37,6 +37,7 @@ class EpisodeFragment : BaseFragment<EpisodeViewModel, FragmentEpisodeBinding>(
         )
 
         episodeAdapter.addLoadStateListener { loadStates ->
+
             rvEpisodes.isVisible = loadStates.refresh is LoadState.NotLoading
             progressBar.isVisible = loadStates.refresh is LoadState.Loading
             swipeRefresh.isRefreshing = loadStates.refresh is LoadState.Loading
@@ -59,6 +60,7 @@ class EpisodeFragment : BaseFragment<EpisodeViewModel, FragmentEpisodeBinding>(
     }
 
     private fun setOnItemClickListener(id: Int) {
+
         findNavController().navigate(
             EpisodeFragmentDirections
                 .actionEpisodeFragmentToEpisodesDetailFragment(id)

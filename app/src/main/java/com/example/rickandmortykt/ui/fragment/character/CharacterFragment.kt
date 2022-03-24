@@ -31,6 +31,7 @@ class CharacterFragment :
     }
 
     private fun setupCharacterRecycler() = with(binding) {
+
         rvCharacters.layoutManager = LinearLayoutManager(requireActivity())
         rvCharacters.adapter = characterAdapter.withLoadStateFooter(
             LoadStateAdapter {
@@ -38,6 +39,7 @@ class CharacterFragment :
             })
 
         characterAdapter.addLoadStateListener { loadStates ->
+
             rvCharacters.isVisible = loadStates.refresh is LoadState.NotLoading
             progressBar.isVisible = loadStates.refresh is LoadState.Loading
             swipeRefresh.isRefreshing = loadStates.refresh is LoadState.Loading
@@ -69,6 +71,7 @@ class CharacterFragment :
         findNavController().navigate(
             CharacterFragmentDirections
                 .actionCharacterFragmentToCharacterDialogFragment(image)
+
         )
     }
 }

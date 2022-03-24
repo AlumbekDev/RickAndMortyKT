@@ -32,10 +32,12 @@ class LocationFragment : BaseFragment<LocationViewModel, FragmentLocationBinding
         rvLocations.layoutManager = LinearLayoutManager(requireActivity())
         rvLocations.adapter = locationAdapter.withLoadStateFooter(
             LoadStateAdapter {
+
                 locationAdapter.retry()
             })
 
         locationAdapter.addLoadStateListener { loadStates ->
+
             rvLocations.isVisible = loadStates.refresh is LoadState.NotLoading
             progressBar.isVisible = loadStates.refresh is LoadState.Loading
             swipeRefresh.isRefreshing = loadStates.refresh is LoadState.Loading

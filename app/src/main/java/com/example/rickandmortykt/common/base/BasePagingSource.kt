@@ -14,6 +14,7 @@ open class BasePagingSource<T : Any>(
         return state.anchorPosition?.let { anchorPosition ->
             val anchorPage = state.closestPageToPosition(anchorPosition)
             anchorPage?.prevKey?.plus(1) ?: anchorPage?.nextKey?.minus(1)
+
         }
     }
 
@@ -25,6 +26,7 @@ open class BasePagingSource<T : Any>(
             val next = response.info.next
             val nextPageNumber = if (next == null) {
                 null
+
             } else {
                 Uri.parse(response.info.next).getQueryParameter("page")!!.toInt()
             }
@@ -34,11 +36,14 @@ open class BasePagingSource<T : Any>(
                 prevKey = null,
                 nextKey = nextPageNumber
             )
+
         } catch (exception: IOException) {
             LoadResult.Error(exception)
+
+
         } catch (exception: HttpException) {
             LoadResult.Error(exception)
+
         }
     }
-
 }
