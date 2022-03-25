@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
 class LocationsDetailViewModel constructor(
+
     private val repository: LocationRepository
 ) : BaseViewModel() {
     private val _locationState = MutableStateFlow<UIState<LocationDto>>(UIState.Loading())

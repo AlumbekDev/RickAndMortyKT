@@ -17,7 +17,6 @@ class LocationsDetailFragment :
 
     override val viewModel: LocationsDetailViewModel by viewModel()
     override val binding by viewBinding(FragmentLocationsDetailBinding::bind)
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.fetchLocation(LocationsDetailFragmentArgs.fromBundle(requireArguments()).id)

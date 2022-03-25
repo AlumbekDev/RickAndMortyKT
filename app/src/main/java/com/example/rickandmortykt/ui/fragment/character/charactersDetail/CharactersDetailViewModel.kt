@@ -7,7 +7,6 @@ import com.example.rickandmortykt.ui.state.UIState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
-
 class CharactersDetailViewModel constructor(
     private val repository: CharacterRepository
 ) : BaseViewModel() {

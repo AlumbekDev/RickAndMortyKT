@@ -11,8 +11,7 @@ import com.example.rickandmortykt.ui.state.UIState
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class EpisodesDetailFragment : BaseFragment<EpisodesDetailViewModel, FragmentEpisodesDetailBinding>(
-    R.layout.fragment_episodes_detail
-) {
+    R.layout.fragment_episodes_detail) {
     override val viewModel: EpisodesDetailViewModel by viewModel()
     override val binding by viewBinding(FragmentEpisodesDetailBinding::bind)
 

@@ -8,5 +8,6 @@ import com.example.rickandmortykt.data.repository.EpisodeRepository
 class EpisodeViewModel constructor(
     private val repository: EpisodeRepository
 ) : BaseViewModel() {
+
     fun fetchEpisode() = repository.fetchEpisodes().cachedIn(viewModelScope)
 }

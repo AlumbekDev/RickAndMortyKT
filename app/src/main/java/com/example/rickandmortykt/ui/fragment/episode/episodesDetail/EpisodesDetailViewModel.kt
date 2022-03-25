@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
 class EpisodesDetailViewModel constructor(
+
     private val repository: EpisodeRepository
 ) : BaseViewModel() {
     private val _episodeState = MutableStateFlow<UIState<EpisodeDto>>(UIState.Loading())

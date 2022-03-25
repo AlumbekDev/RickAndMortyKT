@@ -11,8 +11,7 @@ import com.example.rickandmortykt.databinding.FragmentCharactersDetailBinding
 import com.example.rickandmortykt.ui.state.UIState
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class CharactersDetailFragment :
-    BaseFragment<CharactersDetailViewModel, FragmentCharactersDetailBinding>(
+class CharactersDetailFragment : BaseFragment<CharactersDetailViewModel, FragmentCharactersDetailBinding>(
         R.layout.fragment_characters_detail
     ) {
 
