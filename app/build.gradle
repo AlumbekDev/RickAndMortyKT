@@ -7,7 +7,7 @@ plugins {
     id 'dagger.hilt.android.plugin'
 
     // Save Args
-//    id 'androidx.navigation.safeargs.kotlin'
+    //id 'androidx.navigation.safeargs.kotlin'
     id("androidx.navigation.safeargs")
 }
 
@@ -97,8 +97,10 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.3'
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3'
 
+
     // Paging 3
     def paging_version = "3.1.0"
+    //noinspection GradleDependency
     implementation "androidx.paging:paging-runtime-ktx:$paging_version"
 
     // Coil

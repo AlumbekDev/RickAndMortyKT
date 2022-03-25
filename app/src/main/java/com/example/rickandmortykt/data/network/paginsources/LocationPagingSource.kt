@@ -8,4 +8,5 @@ class LocationPagingSource(
     private val service: LocationApiService
 ) : BasePagingSource<LocationDto>({ position ->
     service.fetchLocations(position)
+
 })

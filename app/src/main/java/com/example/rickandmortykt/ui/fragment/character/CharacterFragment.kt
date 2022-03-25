@@ -39,7 +39,6 @@ class CharacterFragment :
             })
 
         characterAdapter.addLoadStateListener { loadStates ->
-
             rvCharacters.isVisible = loadStates.refresh is LoadState.NotLoading
             progressBar.isVisible = loadStates.refresh is LoadState.Loading
             swipeRefresh.isRefreshing = loadStates.refresh is LoadState.Loading

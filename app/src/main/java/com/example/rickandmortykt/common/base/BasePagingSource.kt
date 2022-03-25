@@ -10,6 +10,7 @@ import java.io.IOException
 open class BasePagingSource<T : Any>(
     private val request: suspend (position: Int) -> RickAndMortyResponse<T>
 ) : PagingSource<Int, T>() {
+
     override fun getRefreshKey(state: PagingState<Int, T>): Int? {
         return state.anchorPosition?.let { anchorPosition ->
             val anchorPage = state.closestPageToPosition(anchorPosition)
@@ -29,12 +30,14 @@ open class BasePagingSource<T : Any>(
 
             } else {
                 Uri.parse(response.info.next).getQueryParameter("page")!!.toInt()
+
             }
 
             LoadResult.Page(
                 data = response.results,
                 prevKey = null,
                 nextKey = nextPageNumber
+
             )
 
         } catch (exception: IOException) {
