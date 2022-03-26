@@ -1,6 +1,7 @@
 package com.example.rickandmortykt.ui.fragment.location
 
 import androidx.core.view.isVisible
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
@@ -11,14 +12,14 @@ import com.example.rickandmortykt.R
 import com.example.rickandmortykt.databinding.FragmentLocationBinding
 import com.example.rickandmortykt.ui.adapter.LocationAdapter
 import com.example.rickandmortykt.ui.adapter.paging.LoadStateAdapter
-import kotlinx.coroutines.flow.collectLatest
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@AndroidEntryPoint
 class LocationFragment : BaseFragment<LocationViewModel, FragmentLocationBinding>(
     R.layout.fragment_location
 ) {
-    override val viewModel: LocationViewModel by viewModel()
+    override val viewModel: LocationViewModel by viewModels()
     override val binding by viewBinding(FragmentLocationBinding::bind)
     private val locationAdapter = LocationAdapter(
         this::setOnItemClickListener
@@ -47,11 +48,9 @@ class LocationFragment : BaseFragment<LocationViewModel, FragmentLocationBinding
     }
 
     override fun setupRequests() {
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.fetchLocations().collectLatest {
-                this@LocationFragment.lifecycleScope.launch {
-                    locationAdapter.submitData(it)
-                }
+        viewModel.fetchLocations().observe(requireActivity()) {
+            this.lifecycleScope.launch {
+                locationAdapter.submitData(it)
             }
         }
     }

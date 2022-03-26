@@ -1,6 +1,7 @@
 package com.example.rickandmortykt.ui.fragment.episode
 
 import androidx.core.view.isVisible
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
@@ -11,14 +12,14 @@ import com.example.rickandmortykt.R
 import com.example.rickandmortykt.databinding.FragmentEpisodeBinding
 import com.example.rickandmortykt.ui.adapter.EpisodeAdapter
 import com.example.rickandmortykt.ui.adapter.paging.LoadStateAdapter
-import kotlinx.coroutines.flow.collectLatest
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@AndroidEntryPoint
 class EpisodeFragment : BaseFragment<EpisodeViewModel, FragmentEpisodeBinding>(
     R.layout.fragment_episode
 ) {
-    override val viewModel: EpisodeViewModel by viewModel()
+    override val viewModel: EpisodeViewModel by viewModels()
     override val binding by viewBinding(FragmentEpisodeBinding::bind)
     private val episodeAdapter = EpisodeAdapter(
         this::setOnItemClickListener
@@ -49,11 +50,9 @@ class EpisodeFragment : BaseFragment<EpisodeViewModel, FragmentEpisodeBinding>(
     }
 
     override fun setupRequests() {
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.fetchEpisode().collectLatest {
-                this@EpisodeFragment.lifecycleScope.launch {
-                    episodeAdapter.submitData(it)
-                }
+        viewModel.fetchEpisode().observe(requireActivity()) {
+            this.lifecycleScope.launch {
+                episodeAdapter.submitData(it)
             }
         }
     }

@@ -3,19 +3,21 @@ package com.example.rickandmortykt.ui.fragment.location.locationsDetail
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
+import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.rickandmortykt.common.base.BaseFragment
 import com.example.rickandmortykt.R
 import com.example.rickandmortykt.databinding.FragmentLocationsDetailBinding
 import com.example.rickandmortykt.ui.state.UIState
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LocationsDetailFragment :
     BaseFragment<LocationsDetailViewModel, FragmentLocationsDetailBinding>(
         R.layout.fragment_locations_detail
     ) {
 
-    override val viewModel: LocationsDetailViewModel by viewModel()
+    override val viewModel: LocationsDetailViewModel by viewModels()
     override val binding by viewBinding(FragmentLocationsDetailBinding::bind)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

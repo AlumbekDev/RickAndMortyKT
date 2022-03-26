@@ -4,10 +4,13 @@ import com.example.rickandmortykt.common.base.BaseViewModel
 import com.example.rickandmortykt.data.network.dto.episode.EpisodeDto
 import com.example.rickandmortykt.data.repository.EpisodeRepository
 import com.example.rickandmortykt.ui.state.UIState
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import javax.inject.Inject
 
-class EpisodesDetailViewModel constructor(
+@HiltViewModel
+class EpisodesDetailViewModel @Inject constructor(
 
     private val repository: EpisodeRepository
 ) : BaseViewModel() {

@@ -4,8 +4,11 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
 import com.example.rickandmortykt.common.base.BaseViewModel
 import com.example.rickandmortykt.data.repository.LocationRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class LocationViewModel constructor(
+@HiltViewModel
+class LocationViewModel @Inject constructor(
     private val repository: LocationRepository
 ) : BaseViewModel() {
 

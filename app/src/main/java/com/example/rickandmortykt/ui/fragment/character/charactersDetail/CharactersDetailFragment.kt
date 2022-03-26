@@ -3,19 +3,21 @@ package com.example.rickandmortykt.ui.fragment.character.charactersDetail
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
+import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import coil.load
 import com.example.rickandmortykt.common.base.BaseFragment
 import com.example.rickandmortykt.R
 import com.example.rickandmortykt.databinding.FragmentCharactersDetailBinding
 import com.example.rickandmortykt.ui.state.UIState
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CharactersDetailFragment : BaseFragment<CharactersDetailViewModel, FragmentCharactersDetailBinding>(
         R.layout.fragment_characters_detail
     ) {
 
-    override val viewModel: CharactersDetailViewModel by viewModel()
+    override val viewModel: CharactersDetailViewModel by viewModels()
     override val binding by viewBinding(FragmentCharactersDetailBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

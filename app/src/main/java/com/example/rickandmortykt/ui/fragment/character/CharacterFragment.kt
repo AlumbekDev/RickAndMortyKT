@@ -1,6 +1,7 @@
 package com.example.rickandmortykt.ui.fragment.character
 
 import androidx.core.view.isVisible
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
@@ -11,14 +12,14 @@ import com.example.rickandmortykt.R
 import com.example.rickandmortykt.databinding.FragmentCharacterBinding
 import com.example.rickandmortykt.ui.adapter.CharacterAdapter
 import com.example.rickandmortykt.ui.adapter.paging.LoadStateAdapter
-import kotlinx.coroutines.flow.collectLatest
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@AndroidEntryPoint
 class CharacterFragment :
     BaseFragment<CharacterViewModel, FragmentCharacterBinding>(R.layout.fragment_character) {
 
-    override val viewModel: CharacterViewModel by viewModel()
+    override val viewModel: CharacterViewModel by viewModels()
     override val binding by viewBinding(FragmentCharacterBinding::bind)
 
     private val characterAdapter = CharacterAdapter(
@@ -50,11 +51,9 @@ class CharacterFragment :
     }
 
     override fun setupRequests() {
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.fetchCharacters().collectLatest {
-                this@CharacterFragment.lifecycleScope.launch {
-                    characterAdapter.submitData(it)
-                }
+        viewModel.fetchCharacters().observe(requireActivity()) {
+            this.lifecycleScope.launch {
+                characterAdapter.submitData(it)
             }
         }
     }
