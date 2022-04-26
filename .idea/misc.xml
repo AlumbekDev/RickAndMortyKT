@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/drawable/circle_dead.xml" value="0.1425" />
+        <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.1475" />
         <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/drawable/ic_baseline_episode.xml" value="0.1425" />
         <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.146" />
-        <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/layout/fragment_character.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1475" />
+        <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/drawable/toolbar_background_corner.xml" value="0.1475" />
+        <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/layout/fragment_character.xml" value="0.2" />
         <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/layout/fragment_character_dialog.xml" value="0.23777173913043478" />
         <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/layout/fragment_characters_detail.xml" value="0.23777173913043478" />
         <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/layout/fragment_episode.xml" value="0.23777173913043478" />
@@ -19,6 +22,7 @@
         <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/layout/item_load_state_footer_view.xml" value="0.23777173913043478" />
         <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/layout/location_item.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/menu/layout_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Alumbek/AndroidStudioProjects/RickAndMortyKT/app/src/main/res/menu/menu_refresh.xml" value="0.25416666666666665" />
       </map>
     </option>

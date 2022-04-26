@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.rickandmortykt.data.network.dto.location.LocationDto
 import com.example.rickandmortykt.common.base.BaseComparator
+import com.example.rickandmortykt.data.network.dto.location.LocationDto
 import com.example.rickandmortykt.databinding.LocationItemBinding
 
 class LocationAdapter(

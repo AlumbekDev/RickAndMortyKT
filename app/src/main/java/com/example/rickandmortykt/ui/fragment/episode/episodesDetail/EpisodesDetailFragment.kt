@@ -3,18 +3,18 @@ package com.example.rickandmortykt.ui.fragment.episode.episodesDetail
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
-import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.example.rickandmortykt.common.base.BaseFragment
 import com.example.rickandmortykt.R
+import com.example.rickandmortykt.common.base.BaseFragment
 import com.example.rickandmortykt.databinding.FragmentEpisodesDetailBinding
 import com.example.rickandmortykt.ui.state.UIState
-import dagger.hilt.android.AndroidEntryPoint
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-@AndroidEntryPoint
+
 class EpisodesDetailFragment : BaseFragment<EpisodesDetailViewModel, FragmentEpisodesDetailBinding>(
-    R.layout.fragment_episodes_detail) {
-    override val viewModel: EpisodesDetailViewModel by viewModels()
+    R.layout.fragment_episodes_detail
+) {
+    override val viewModel: EpisodesDetailViewModel by viewModel()
     override val binding by viewBinding(FragmentEpisodesDetailBinding::bind)
 
 

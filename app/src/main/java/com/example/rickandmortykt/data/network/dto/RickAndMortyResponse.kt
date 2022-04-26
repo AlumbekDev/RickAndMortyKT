@@ -2,7 +2,7 @@ package com.example.rickandmortykt.data.network.dto
 
 import com.google.gson.annotations.SerializedName
 
-class RickAndMortyResponse<T> (
+class RickAndMortyResponse<T>(
     @SerializedName("info")
     val info: Info,
     @SerializedName("results")

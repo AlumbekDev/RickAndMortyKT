@@ -1,5 +1,5 @@
 package com.example.rickandmortykt.common.constants
 
-object Constants{
+object Constants {
     const val BASE_URL = "https://rickandmortyapi.com/api/"
 }

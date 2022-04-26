@@ -7,9 +7,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.example.rickandmortykt.R
 import com.example.rickandmortykt.databinding.ActivityMainBinding
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
@@ -30,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         ).build()
 
         NavigationUI.setupWithNavController(binding.navView, navController)
-        NavigationUI.setupWithNavController(binding.toolBar, navController, appBarConfiguration)
+//        NavigationUI.setupWithNavController(binding.toolBar, navController, appBarConfiguration)
+
+
     }
 }

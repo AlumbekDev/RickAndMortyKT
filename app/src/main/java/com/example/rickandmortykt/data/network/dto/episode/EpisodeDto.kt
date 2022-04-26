@@ -1,9 +1,13 @@
 package com.example.rickandmortykt.data.network.dto.episode
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.example.rickandmortykt.common.base.IBaseDiffModel
 import com.google.gson.annotations.SerializedName
 
+@Entity
 data class EpisodeDto(
+    @PrimaryKey(autoGenerate = false)
     @SerializedName("id")
     override val id: Int,
     @SerializedName("name")

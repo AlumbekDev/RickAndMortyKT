@@ -1,9 +1,9 @@
 package com.example.rickandmortykt.data.network
 
+import com.example.rickandmortykt.common.constants.Constants
 import com.example.rickandmortykt.data.network.api.CharacterApiService
 import com.example.rickandmortykt.data.network.api.EpisodeApiService
 import com.example.rickandmortykt.data.network.api.LocationApiService
-import com.example.rickandmortykt.common.constants.Constants
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

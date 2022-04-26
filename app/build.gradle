@@ -4,7 +4,6 @@ plugins {
 
     //Kapt
     id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
 
     // Save Args
     //id 'androidx.navigation.safeargs.kotlin'
@@ -115,9 +114,6 @@ dependencies {
     // | kirich1409 | To use only without reflection variants of viewBinding
     implementation 'com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.3'
 
-    // Hilt
-    implementation "com.google.dagger:hilt-android:2.40"
-    kapt "com.google.dagger:hilt-android-compiler:2.40"
 
     // SwipeRefreshLayout
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
@@ -143,6 +139,8 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0'
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
 
-
-
+    // Koin
+    def koin_version = "3.1.4"
+    // | for main features for Android
+    implementation "io.insert-koin:koin-android:$koin_version"
 }

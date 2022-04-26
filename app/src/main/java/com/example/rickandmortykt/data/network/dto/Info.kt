@@ -2,7 +2,7 @@ package com.example.rickandmortykt.data.network.dto
 
 import com.google.gson.annotations.SerializedName
 
-data class Info (
+data class Info(
     @SerializedName("count")
     val count: Int,
     @SerializedName("pages")

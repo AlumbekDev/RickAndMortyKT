@@ -81,8 +81,8 @@
         <TextView
             android:id="@+id/title_location"
             android:layout_width="0dp"
-            android:layout_margin="10dp"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_marginStart="7dp"
             android:layout_marginTop="30dp"
             android:text="Last known location:"

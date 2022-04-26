@@ -7,9 +7,8 @@ import android.view.LayoutInflater
 import androidx.fragment.app.DialogFragment
 import coil.load
 import com.example.rickandmortykt.databinding.FragmentCharacterDialogBinding
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
 class CharacterDialogFragment : DialogFragment() {
 
     private lateinit var binding: FragmentCharacterDialogBinding
